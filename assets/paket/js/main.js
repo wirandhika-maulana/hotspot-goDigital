@@ -841,7 +841,7 @@ function handleSubmit(event) {
 
     // Format message for both platforms
     const message = `Pesan Baru Form Gangguan dan Berlangganan\n
-Name: ${nama}\n
+Nama: ${nama}\n
 Email: ${email}\n
 WhatsApp: ${whatsapp}\n
 Layanan: ${layanan}\n
@@ -871,11 +871,11 @@ Pesan: ${pesan}`;
 
     // Email submission di Formspre - Payung.Net
     const formData = new FormData();
-    formData.append('name', nama);
-    formData.append('email', email);
-    formData.append('whatsapp', whatsapp);
-    formData.append('layanan', layanan);
-    formData.append('message', pesan);
+    formData.append('Nama:', nama);
+    formData.append('Email:', email);
+    formData.append('Whatsapp:', whatsapp);
+    formData.append('Layanan:', layanan);
+    formData.append('Pesan:', pesan);
 
     fetch('https://formspree.io/f/mqaelkvj', {
         method: 'POST',
