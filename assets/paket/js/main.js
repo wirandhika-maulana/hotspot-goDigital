@@ -840,7 +840,7 @@ function handleSubmit(event) {
     const pesan = document.getElementById('pesan').value;
 
     // Format message for both platforms
-    const message = `New Chat Form Submission\n
+    const message = `Pesan Baru : Form Gangguan dan Berlangganan\n
 Name: ${nama}\n
 Email: ${email}\n
 WhatsApp: ${whatsapp}\n
