@@ -827,32 +827,32 @@ if ($(".curved-circle").length) {
 
 
 
-// KIRIM PESAN KE WHATSAPP ///
+// KIRIM PESAN fORM OTOMATIS KE SEMUA PLATFORM ///
 
 function handleSubmit(event) {
     event.preventDefault();
     
-    // Get form values
+    // MENGARAHKAN KE VALUE
     const nama = document.getElementById('nama').value;
     const email = document.getElementById('email').value;
     const whatsapp = document.getElementById('whatsapp').value;
     const layanan = document.getElementById('layanan').value;
     const pesan = document.getElementById('pesan').value;
 
-    // Format message for both platforms
+    // FORMAT PESAN KE SEMUA PLATFORM
     const message = `Pesan Baru Form Gangguan dan Berlangganan\n
-Nama: ${nama}\n
-Email: ${email}\n
-WhatsApp: ${whatsapp}\n
-Layanan: ${layanan}\n
-Pesan: ${pesan}`;
+    Nama: ${nama}\n
+    Email: ${email}\n
+    WhatsApp: ${whatsapp}\n
+    Layanan: ${layanan}\n
+    Pesan: ${pesan}`;
 
-    // // WhatsApp integration
-    // const waMessage = message.replace(/\n/g, '%0a');
-    // const waURL = `https://api.whatsapp.com/send?phone=6281914933023&text=${waMessage}`;
-    // window.open(waURL, '_blank');
+    // // WHATSAPP INTEGRATION
+    const waMessage = message.replace(/\n/g, '%0a');
+    const waURL = `https://api.whatsapp.com/send?phone=6281914933023&text=${waMessage}`;
+    window.open(waURL, '_blank');
 
-    // Telegram integration
+    // TELEGRAM INTEGRATION
     const TELEGRAM_BOT_TOKEN = '7905324996:AAG5lbAW9pWodw4cWnwhRjdM2uwv_n4cEME';
     const TELEGRAM_CHAT_ID = '-4613194659';
     const telegramURL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
@@ -869,7 +869,7 @@ Pesan: ${pesan}`;
         })
     });
 
-    // Email submission di Formspre - Payung.Net
+    // EMAIL INTEGRATION
     const formData = new FormData();
     formData.append('Nama:', nama);
     formData.append('Email:', email);
