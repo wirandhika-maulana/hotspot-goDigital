@@ -92,13 +92,56 @@
             height: 100%;
             z-index: -1;
         }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        .logo-divider {
+            width: 2px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0 10px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 576px) {
+            .logo-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .logo-divider {
+                width: 150px;
+                height: 2px;
+                margin: 5px 0;
+            }
+
+            .logo {
+                width: 150px;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="particles-js" class="particles"></div>
     
     <div class="splash-container">
-        <img src="assets/images/logo/fix-logo-paten-putih220px.png" alt="Payung Go Digital Logo" class="logo">
+        <div class="logo-container">
+            <img src="assets/images/logo/fix-logo-paten-putih220px.png" alt="Payung Go Digital Logo" class="logo">
+            <div class="logo-divider"></div>
+            <img src="/assets/images/logo/desa-payung.png" alt="Desa Payung Logo" class="logo" sizes="220px">
+        </div>
         <h1 class="welcome-text">Welcome to Payung Go Digital</h1>
         <p class="tagline">Membangun Desa Digital, Mewujudkan Masa Depan</p>
         <button class="enter-button" onclick="enterSite()">Masuk</button>
