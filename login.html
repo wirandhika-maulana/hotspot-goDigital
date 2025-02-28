@@ -57,14 +57,14 @@
     </form>
     <script type="text/javascript" src="/md5.js"></script>
     <script type="text/javascript">
-        <!-
-        function doLogin() {
-        document.sendin.username.value = document.login.username.value;
-        document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
-        document.sendin.submit();
-        return false;
-        }
-        //-->
+            <!--
+            function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+            }
+            //-->
     </script>
     $(endif)
 
@@ -653,27 +653,27 @@
     <script src="assets/static/js/custom.js"></script>
 
 
-    <!--=============== SCRIPT LOGIN HOTSPOT ===============-->
-    $(if chap-id)
-    <script type="text/javascript" src="md5.js"></script>
-    <script type="text/javascript">
-        $('#loginForm').submit(function () {
-            var password = $('#inputPassword');
-            password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
-        });
-    </script>
-    $(endif)
-    <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    </script>
-    <script type="text/javascript">
-        <!-
+        <!--=============== SCRIPT LOGIN HOTSPOT ===============-->
+        $(if chap-id)
+        <script type="text/javascript" src="md5.js"></script>
+        <script type="text/javascript">
+            $('#loginForm').submit(function () {
+                var password = $('#inputPassword');
+                password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
+            });
+        </script>
+        $(endif)
+        <script>
+          $("#menu-toggle").click(function (e) {
+              e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+          });
+        </script>
+        <script type="text/javascript">
+        <!--
           document.login.username.focus();
         //-->
-    </script>
+        </script>
 
 
 
