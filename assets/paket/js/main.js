@@ -849,7 +849,7 @@ function handleSubmit(event) {
 
     // // WHATSAPP INTEGRATION
     const waMessage = message.replace(/\n/g, '%0a');
-    const waURL = `https://api.whatsapp.com/send?phone=6281914933023&text=${waMessage}`;
+    const waURL = `https://api.whatsapp.com/send?phone=621825296345&text=${waMessage}`;
     window.open(waURL, '_blank');
 
     // TELEGRAM INTEGRATION
